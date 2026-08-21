@@ -15,6 +15,50 @@ export default function AudioPlayer() {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
+
+    // Set initial audio properties
+    audio.volume = volume;
+    audio.muted = isMuted;
+
+    const playAudio = () => {
+      audio.play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(() => {
+          setIsPlaying(false);
+        });
+    };
+
+    // Attempt to play on mount
+    playAudio();
+
+    // In case browser blocks autoplay on mount, try to play on first user interaction
+    const handleInteraction = () => {
+      if (audio.paused) {
+        playAudio();
+      }
+      cleanupListeners();
+    };
+
+    const cleanupListeners = () => {
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("keydown", handleInteraction);
+      window.removeEventListener("touchstart", handleInteraction);
+    };
+
+    window.addEventListener("click", handleInteraction);
+    window.addEventListener("keydown", handleInteraction);
+    window.addEventListener("touchstart", handleInteraction);
+
+    return () => {
+      cleanupListeners();
+    };
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
     audio.volume = volume;
     audio.muted = isMuted;
   }, [volume, isMuted]);
@@ -47,7 +91,8 @@ export default function AudioPlayer() {
         ref={audioRef}
         src={trackUrl}
         loop
-        preload="metadata"
+        autoPlay
+        preload="auto"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       />
@@ -60,7 +105,6 @@ export default function AudioPlayer() {
         >
           <span className="audio-icon-wrap">{isPlaying ? <Pause size={16} fill="currentColor" /> : <Play size={16} fill="currentColor" />}</span>
           <span className="audio-main-copy"><strong>{isPlaying ? "Petal waltz playing" : "Play birthday music"}</strong><small>for Yusra</small></span>
-          <Sparkles className="audio-sparkle" size={15} />
         </button>
 
         <button className="audio-expand-control" onClick={() => setIsExpanded((current) => !current)} aria-label={isExpanded ? "Close music controls" : "Open music controls"} aria-expanded={isExpanded}>
