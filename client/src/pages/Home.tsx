@@ -1,4 +1,4 @@
-/* Petal Postcard design reminder: welcome Yusra with a tactile wax-sealed envelope
+/* Petal Postcard design reminder: welcome Beeba with a tactile wax-sealed envelope
    that invites her to break the seal, unfolding a handwritten letter before beginning the journey. */
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Heart, Mail, Sparkles, Star } from "lucide-react";
@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <BirthdayShell step={1} label="A note for Yusra">
+    <BirthdayShell step={1} label="A note for Beeba">
       <section className="screen welcome-screen" aria-labelledby="welcome-title">
         <motion.div
           className="welcome-copy"
@@ -29,7 +29,7 @@ export default function Home() {
             <Heart size={13} fill="currentColor" /> a special delivery for
           </p>
           <h1 id="welcome-title">
-            Dear <em>Yusra,</em>
+            Dear <em>Beeba,</em>
           </h1>
           <p className="welcome-message">
             Today the world has a little more sparkle because it belongs to you. Here is a tiny,
@@ -46,12 +46,12 @@ export default function Home() {
               <div className="envelope-stamp-row">
                 <div className="envelope-address">
                   <span>Priority Airmail · Keepsake Edition</span>
-                  <strong>Miss Yusra</strong>
+                  <strong>Miss Beeba</strong>
                 </div>
 
                 <div className="vintage-stamp">
                   <span>Special</span>
-                  <strong>OCT 5</strong>
+                  <strong>OCT 6</strong>
                   <small>For Her</small>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function Home() {
                       onClick={handleOpenEnvelope}
                       whileHover={{ scale: 1.08, rotate: -2 }}
                       whileTap={{ scale: 0.94 }}
-                      aria-label="Break the wax seal to read Yusra's letter"
+                      aria-label="Break the wax seal to read Beeba's letter"
                     >
                       <span className="wax-seal-inner-ring" />
                       <Heart size={26} fill="currentColor" />
@@ -85,7 +85,7 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
                   >
-                    <div className="letter-salutation">Happy Birthday, Yusra 🌸</div>
+                    <div className="letter-salutation">Happy Birthday, Beeba 🌸</div>
                     <div className="letter-body">
                       In a world that often rushes by, you carry a rare and gentle grace. Your
                       laughter brings lightness to ordinary rooms, and your warmth makes everyone

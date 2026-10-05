@@ -35,9 +35,9 @@ export default function BirthdayShell({ children, step, label }: BirthdayShellPr
       <SparkleTrail />
       <div className="paper-grain" aria-hidden="true" />
       <header className="journey-header">
-        <button className="journey-brand" onClick={() => setLocation("/")} aria-label="Return to Yusra's birthday home">
+        <button className="journey-brand" onClick={() => setLocation("/")} aria-label="Return to Beeba's birthday home">
           <img src={logo} alt="" />
-          <span><strong>Happy Birthday, Yusra</strong><small>a little surprise</small></span>
+          <span><strong>Happy Birthday, Beeba</strong><small>a little surprise</small></span>
         </button>
 
         <div className="header-actions">

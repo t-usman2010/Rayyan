@@ -1,5 +1,5 @@
 /* Petal Postcard design reminder: the experience is a mobile-first birthday journey of distinct,
-  tactile postcard scenes for Yusra, using cherry-plum ink, satin bows, and paper-layer reveals. */
+  tactile postcard scenes for Beeba, using cherry-plum ink, satin bows, and paper-layer reveals. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch } from "wouter";

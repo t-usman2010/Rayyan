@@ -1,5 +1,5 @@
 /* Petal Postcard design reminder: the final page is a gentle birthday candle scene with an interactive
-   blowable candle flame, wispy smoke animation, and a celestial Sky Lantern Wish ceremony for Yusra. */
+   blowable candle flame, wispy smoke animation, and a celestial Sky Lantern Wish ceremony for Beeba. */
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Heart, RotateCcw, Send, Sparkles, Wind } from "lucide-react";
 import { useState } from "react";
@@ -41,7 +41,7 @@ export default function Wish() {
   const currentWishText = customWish.trim() || presetWishes[selectedChip];
 
   return (
-    <BirthdayShell step={4} label="A wish for Yusra">
+    <BirthdayShell step={4} label="A wish for Beeba">
       <section className="screen wish-screen" aria-labelledby="wish-title">
         {/* Left column: Cake with Interactive Blowable Candle */}
         <motion.div
@@ -62,7 +62,7 @@ export default function Wish() {
                 className="candle-flame-btn"
                 onClick={handleBlowCandle}
                 disabled={candleBlown}
-                aria-label={candleBlown ? "Candle is blown out" : "Blow out Yusra's birthday candle"}
+                aria-label={candleBlown ? "Candle is blown out" : "Blow out Beeba's birthday candle"}
               >
                 {!candleBlown ? (
                   <svg className="candle-flame-svg" viewBox="0 0 100 140" fill="none">
@@ -119,7 +119,7 @@ export default function Wish() {
             <Sparkles size={13} /> final chapter · the ceremony
           </p>
           <h1 id="wish-title">
-            Make a wish, <em>Yusra.</em>
+            Make a wish, <em>Beeba.</em>
           </h1>
           <p>
             {!candleBlown
@@ -213,7 +213,7 @@ export default function Wish() {
                   Every spark of light you sent into the universe carries the warmth of who you are.
                   May the year ahead return every bit of joy you bring to this world tenfold.
                   <br /><br />
-                  <strong>Happy Birthday, dearest Yusra! 🎂🌸✨</strong>
+                  <strong>Happy Birthday, dearest Beeba! 🎂🌸✨</strong>
                 </p>
 
                 <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap", marginTop: "18px" }}>

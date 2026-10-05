@@ -1,4 +1,4 @@
-/* Petal Postcard design reminder: this route creates an intimate tactile keepsake moment for Yusra,
+/* Petal Postcard design reminder: this route creates an intimate tactile keepsake moment for Beeba,
    featuring folded parchment notes, an interactive 'Reasons You're Irreplaceable' jar, and gold-trimmed cards. */
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, BookOpen, Heart, RefreshCw, Sparkles, Star } from "lucide-react";
@@ -39,13 +39,13 @@ export default function Notes() {
   const allNotesUnlocked = openedCards.length >= 3 && drawnCount >= 2;
 
   return (
-    <BirthdayShell step={2} label="Keepsake notes for Yusra">
+    <BirthdayShell step={2} label="Keepsake notes for Beeba">
       <section className="screen notes-screen" aria-labelledby="notes-title">
         <div className="screen-heading compact-heading">
           <p className="chapter-label">chapter two · keepsakes</p>
           <h1 id="notes-title">
             Treasures for<br />
-            <em>Yusra.</em>
+            <em>Beeba.</em>
           </h1>
           <p>
             Touch each keepsake below to reveal what has been written for you.

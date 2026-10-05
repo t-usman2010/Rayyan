@@ -1,5 +1,5 @@
 /* Petal Postcard design reminder: the gift is the tactile center of the journey—an unmissable,
-  replayable wrapped-object interaction that visibly opens before revealing Yusra's Holographic VIP Birthday Pass. */
+  replayable wrapped-object interaction that visibly opens before revealing Beeba's Holographic VIP Birthday Pass. */
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle2, Heart, RotateCcw, Sparkles, Star } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -56,11 +56,11 @@ export default function Gift() {
   };
 
   return (
-    <BirthdayShell step={3} label="Yusra's birthday gift">
+    <BirthdayShell step={3} label="Beeba's birthday gift">
       <section className="screen gift-screen" aria-labelledby="gift-title">
         <div className="screen-heading compact-heading gift-heading">
           <p className="chapter-label">chapter three · the surprise</p>
-          <h1 id="gift-title">A present for <em>Yusra.</em></h1>
+          <h1 id="gift-title">A present for <em>Beeba.</em></h1>
           <p>
             {giftState === "open"
               ? "You found it! Your Golden Birthday Pass is here."
@@ -77,7 +77,7 @@ export default function Gift() {
           </div>
           <div className="gift-side-note right">
             <Sparkles size={15} />
-            <span>made for<br />Yusra</span>
+            <span>made for<br />Beeba</span>
           </div>
 
           <motion.button
@@ -85,7 +85,7 @@ export default function Gift() {
             key={giftKey}
             onClick={unwrap}
             whileTap={giftState === "ready" ? { scale: 0.97 } : undefined}
-            aria-label={giftState === "ready" ? "Open Yusra's gift" : "Yusra's gift is open"}
+            aria-label={giftState === "ready" ? "Open Beeba's gift" : "Beeba's gift is open"}
             disabled={giftState !== "ready"}
           >
             <span className="gift-ribbon-tail tail-left" />
@@ -120,7 +120,7 @@ export default function Gift() {
                   <Heart size={17} fill="currentColor" />
                 </span>
                 <div>
-                  <strong>Yay, Yusra!</strong>
+                  <strong>Yay, Beeba!</strong>
                   <span>Your birthday surprise is blooming open.</span>
                 </div>
                 <Sparkles className="pop-up-sparkle" size={18} />
@@ -183,7 +183,7 @@ export default function Gift() {
                 <div className="holographic-pass">
                   <div className="pass-header">
                     <span className="pass-badge">✨ Official VIP Pass</span>
-                    <span className="pass-serial">NO. YUSRA-2026-BDAY</span>
+                    <span className="pass-serial">NO. BEEBA-2026-BDAY</span>
                   </div>
 
                   <div className="pass-title-row">
@@ -192,7 +192,7 @@ export default function Gift() {
                   </div>
 
                   <p style={{ margin: "8px 0 0", fontSize: "0.78rem", color: "var(--ink-soft)" }}>
-                    Admit One: <strong style={{ color: "#fff" }}>Miss Yusra</strong> · Fully Entitled to:
+                    Admit One: <strong style={{ color: "#fff" }}>Miss Beeba</strong> · Fully Entitled to:
                   </p>
 
                   <ul className="pass-perks-list">
