@@ -14,6 +14,12 @@
 - [x] Download all hosted birthday images and music into local project assets.
 - [x] Replace hosted media URLs with local references for offline use.
 - [x] Verify the project builds and serves its local media successfully.
+- [x] Add interactive 3D wax-sealed letter envelope with seal crack sound on Chapter 1 (Home).
+- [x] Add real-time stardust / sparkle cursor & tap trails across the entire app.
+- [x] Add offline procedural Web Audio chime micro-interactions (envelope pop, note chime, celebration chord, candle blow, lantern ascent).
+- [x] Add tactile keepsake album & interactive rolled "Reasons You're Irreplaceable" capsule on Chapter 2 (Notes).
+- [x] Add 3D Holographic VIP Birthday Pass with rainbow shimmer & interactive scratch-off gold foil note on Chapter 3 (Gift).
+- [x] Add interactive blowable candle flame with animated smoke waft & celestial Sky Lantern wish ceremony on Chapter 4 (Wish).
 - [ ] Add clear local setup instructions to the offline project package.
 - [ ] Create a self-contained archive with the source code and all birthday media.
 - [ ] Verify the archive includes all required runnable files and local assets.
